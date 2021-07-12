@@ -1,0 +1,76 @@
+\documentclass[UTF8]{ctexart}
+
+\usepackage{listings}
+\usepackage{xcolor} 
+\usepackage{graphicx}
+\usepackage{booktabs} %绘制表格
+\usepackage{caption2} %标题居中
+\usepackage{geometry}
+\usepackage{array}
+\usepackage{amsmath}
+\usepackage{subfigure} 
+\usepackage{longtable}
+\usepackage{abstract}
+\pagestyle{plain} %页眉消失
+
+\geometry{a4paper,left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\lstset{
+		numbers=left, %设置行号位置
+		numberstyle=\tiny, %设置行号大小
+		keywordstyle=\color{blue}, %设置关键字颜色
+		commentstyle=\color[cmyk]{1,0,1,0}, %设置注释颜色
+		escapeinside=``, %逃逸字符(1左面的键)，用于显示中文
+		breaklines, %自动折行
+		extendedchars=false, %解决代码跨页时，章节标题，页眉等汉字不显示的问题
+		xleftmargin=1em,xrightmargin=1em, aboveskip=1em, %设置边距
+		tabsize=4, %设置tab空格数
+		showspaces=false %不显示空格
+	}
+
+\title{论文标题}
+\date{}
+
+\begin{document}
+    \maketitle
+	\renewcommand{\abstractname}{\Large 摘要\\}
+	\begin{abstract}
+		\normalsize
+		摘要内容
+		\textbf{关键字}：
+	\end{abstract}
+	\newpage
+	
+	\section{问题背景与重述}
+		问题背景与重述
+		
+	\section{模型假设}
+		模型假设
+	\section{符号说明}
+		\begin{longtable}{p{8cm}<{\centering}p{7.5cm}}
+			\toprule  %添加表格头部粗线
+			符号& 意义\\
+			\midrule  %添加表格中横线
+			Steve Jobs& 001\\
+			Bill Gates& 002\\
+			\bottomrule %添加表格底部粗线
+		\end{longtable}
+		
+	\section{问题分析}
+		问题分析
+		\subsection{问题一分析}
+		\subsection{问题二分析}
+		\subsection{问题三分析}
+		
+	\section{模型建立与求解}
+		\subsection{问题一模型的建立}
+		\subsection{问题一模型的求解}
+		
+	\section{模型评价与改进}
+		模型评价与改进
+		
+	\section{参考文献}
+		参考文献
+		
+	\newpage
+	\section{附录}
+\end{document}
